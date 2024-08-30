@@ -8,15 +8,24 @@ namespace WebApplication1.Models
         [Key]
         public int IdAnexo { get; set; }
         [Required]
+        public string PDFPlanta { get; set; }
         public byte[] PlantaPdf { get; set; }
+
+        [Required]
+        public string OrcamentoProjeto
+        public byte[] Orcamento { get; set; }
+
+        [Required]
+        public string AnexosOutros { get; set; }
+        public byte[] OutrosAnexos { get; set; }
+
+        [Required]
+        public string Assinatura { get; set; }
+        public byte[] AssinaturaPdf { get; set; }
+        
         [NotMapped]
         public IFormFile formFile { get; set; }
-        [NotMapped]
-        public byte[] Orcamento { get; set; }
-        [NotMapped]
-        public byte[] OutrosAnexos { get; set; }
-        [NotMapped]
-        public byte[] AssinaturaPdf { get; set; }
+        
         [Required]
         public int IdProjeto { get; set; }
         public projeto projeto { get; set; }
